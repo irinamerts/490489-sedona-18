@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ирина Мерц](https://up.htmlacademy.ru/adaptive/18/user/490489).
-* Наставник: `Неизвестно`.
+* Наставник: [Михон Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
