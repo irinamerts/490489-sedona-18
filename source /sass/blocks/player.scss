@@ -1,0 +1,160 @@
+.player {
+  position: relative;
+}
+
+.player__image {
+  display: block;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: -66px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.player__main-bar {
+  position: relative;
+  display: flex;
+  padding: 22px;
+  height: 45px;
+
+  background-color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.player__seeking-line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -3px;
+    left: 15.5%;
+
+    border: 4.5px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.player__bottom-bar {
+  height: 66px;
+  background-color: #f2f2f2;
+}
+
+.player__button {
+  position: absolute;
+  top: 68px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--replay {
+    top: 66px;
+    left: 9%;
+  }
+
+  &--subtitles {
+    right: 26.2%;
+  }
+
+  &--fullscreen {
+    right: 8%;
+  }
+}
+
+.player__icon {
+  fill: #5c6870;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #333333;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .player__controls {
+    bottom: -1px;
+    padding: 0;
+  }
+
+  .player__main-bar {
+    align-items: center;
+    justify-content: space-between;
+    height: 93px;
+    padding: 0 35px;
+  }
+
+  .player__seeking-line {
+    margin: 0 auto;
+    width: 67%;
+
+    &::before {
+      left: 29%;
+    }
+  }
+
+  .player__button {
+    position: static;
+    fill: #5c6870;
+
+    &--subtitles {
+      margin-top: 1px;
+      margin-right: 31px;
+    }
+
+    &--fullscreen {
+      margin-top: 1px;
+      margin-right: 6px;
+    }
+  }
+
+  .player__icon {
+    fill: #ffffff;
+
+    &:hover {
+      fill: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: #ffffff;
+      opacity: 0.3;
+    }
+  }
+
+  .player__bottom-bar {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .player__controls {
+    bottom: 0;
+  }
+
+  .player__seeking-line {
+    width: 74%;
+
+    &::before {
+      left: 21%;
+    }
+  }
+
+  .player__button {
+    &--fullscreen {
+      margin-right: 7px;
+    }
+  }
+}

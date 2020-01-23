@@ -1,0 +1,149 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.advantage-description {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.advantage-description__list {
+  @include list-reset();
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 35px 20px 9px 70px;
+}
+
+.advantage-description__item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.advantage-description__image {
+  position: absolute;
+
+  &--house {
+    top: -9px;
+    left: -48px;
+    width: 39px;
+    height: 37px;
+  }
+
+  &--gift {
+    top: -11px;
+    left: -45px;
+    width: 32px;
+    height: 38px;
+  }
+
+  &--burger {
+    top: -5px;
+    left: -51px;
+    width: 40px;
+    height: 35px;
+  }
+}
+
+.advantage-description__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantage-description__text {
+  margin: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: $black-alt;
+  font-size: 14px;
+  line-height: 21px;
+
+  &--food br {
+    display: none;
+  }
+
+  &--souvenirs br {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantage-description__list {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .advantage-description__item {
+    flex-direction: column;
+    flex-basis: 256px;
+    flex-grow: 1;
+    align-items: center;
+    margin: 0;
+    padding-top: 57px;
+    padding-right: 46px;
+    padding-bottom: 62px;
+    padding-left: 46px;
+
+    text-align: center;
+
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+
+  .advantage-description__image {
+    position: static;
+    margin-bottom: 19px;
+
+    &--house {
+      width: 75px;
+      height: 75px;
+    }
+
+    &--gift {
+      width: 65px;
+      height: 75px;
+    }
+
+    &--burger {
+      width: 77px;
+      height: 75px;
+    }
+  }
+
+  .advantage-description__text {
+    &--food br {
+      display: inline;
+    }
+  }
+
+  .advantage-description__title {
+    margin-bottom: 21px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantage-description__list {
+    min-height: 330px;
+  }
+
+  .advantage-description__item {
+    flex-basis: 400px;
+    padding-top: 59px;
+    padding-bottom: 21px;
+  }
+
+  .advantage-description__text {
+    &--souvenirs br {
+      display: inline;
+    }
+  }
+}

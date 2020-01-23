@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  padding: 16px;
+  width: 100%;
+
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  border: 0;
+}
+
+.button--blue {
+  color: #ffffff;
+  background-color: $light-grey-blue;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:active .button__text {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #e5e5e5;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}

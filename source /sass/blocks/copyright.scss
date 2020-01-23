@@ -1,0 +1,34 @@
+@import "../variables.scss";
+
+.copyright {
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.copyright__text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.copyright__link {
+  display: flex;
+  margin-left: 12px;
+
+  color: #000000;
+}
+
+.copyright__image {
+  fill: #000000;
+
+  &:hover {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #000000;
+    opacity: 0.3;
+  }
+}

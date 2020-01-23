@@ -1,0 +1,50 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.social {
+  width: 170px;
+}
+
+.social__list {
+  @include list-reset();
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.social__item {
+  width: 46px;
+  height: 48px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+
+  background-color: $light-grey-blue;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:active .social__image {
+    opacity: 0.3;
+  }
+}
+
+.social__image {
+  fill: #ffffff;
+}

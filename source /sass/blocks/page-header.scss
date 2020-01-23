@@ -1,0 +1,12 @@
+.page-header {
+  width: auto;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 1200px;
+  }
+}

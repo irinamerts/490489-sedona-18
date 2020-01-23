@@ -1,0 +1,119 @@
+@import "../variables.scss";
+
+.find-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 7px;
+}
+
+.find-us__wrapper {
+  margin: 0 auto;
+  padding: 28px 20px 49px;
+  width: 100%;
+
+  text-align: center;
+}
+
+.find-us__description {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: $black-alt;
+  font-size: 14px;
+  line-height: 24px;
+
+  &--bold {
+    margin: 0;
+    margin-bottom: 19px;
+
+    font-family: "PT Sans Bold", "Arial", sans-serif;
+    color: #000000;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.find-us__description br {
+  display: none;
+}
+
+.find-us__map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../../img/icon-map-marker.svg");
+  }
+}
+
+.find-us__interactive-map {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.find-us__map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .find-us__wrapper {
+    padding: 55px 0 58px;
+    width: 458px;
+
+    text-align: center;
+  }
+
+  .find-us__description {
+    margin-bottom: 42px;
+
+    &--bold {
+      font-size: 30px;
+      margin-bottom: 31px;
+    }
+  }
+
+  .find-us__description br {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .find-us__wrapper {
+    padding: 55px 0 66px;
+    width: 458px;
+
+    text-align: center;
+  }
+
+  .find-us__description {
+    margin-bottom: 47px;
+
+    &--bold {
+      font-size: 30px;
+      margin-bottom: 31px;
+    }
+  }
+}
